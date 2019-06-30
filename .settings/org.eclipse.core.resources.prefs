@@ -4,4 +4,5 @@ encoding/HTMLTestRunner.py=utf-8
 encoding/get_nothing.py=utf-8
 encoding/new_run_test.py=utf-8
 encoding/post_file_test1.py=utf-8
+encoding/run_tests.py=UTF-8
 encoding/sendEmail.py=utf-8
