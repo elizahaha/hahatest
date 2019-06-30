@@ -33,7 +33,9 @@ if __name__=="__main__":
     
     print(now)  
      
-    filename ='report'+now+'_test_report.html'
+#     filename ='report'+now+'_test_report.html'
+    
+    filename='test_report.html'
     
     report_abspath = os.path.join(report_dir,filename)  
     
