@@ -35,7 +35,7 @@ if __name__=="__main__":
      
     filename ='report'+now+'_test_report.html'
     
-    report_abspath = os.path.join(report_dir,'report_'+now+'_test_report.html')  
+    report_abspath = os.path.join(report_dir,filename)  
     
     fp =open(report_abspath,'wb')
     
