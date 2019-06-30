@@ -50,8 +50,8 @@ if __name__=="__main__":
     time.sleep(6)
 #   获取最新的测试报告    
     
-    new_report_addr = sendEmail.SendEmail().acquire_report_address(report_dir)
-    sendEmail.SendEmail().send_email(new_report_addr)
+#     new_report_addr = sendEmail.SendEmail().acquire_report_address(report_dir)
+#     sendEmail.SendEmail().send_email(new_report_addr)
     
 #     test_report = './report'
 #     rep=report(test_report)
