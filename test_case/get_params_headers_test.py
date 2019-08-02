@@ -9,6 +9,7 @@ Created on 2019��4��10��
 import requests
 import unittest
 from public import base
+from public import HttpService
 
 
 class GetParamsHeadersTest(unittest.TestCase):
@@ -21,14 +22,19 @@ class GetParamsHeadersTest(unittest.TestCase):
         
     def test_params_headers(self):
 
-        parmers ={"show_env":1}
+        params ={"show_env":1}
         
         header={'Connection': 'keep-alive', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'User-Agent': 'python-requests/2.21.0'}
         
+        DataALL ={'params':params,'headers':header}
         
-        r=requests.get(self.url,params=parmers,headers=header)
-        
-        resp = r.json()
+#       r=requests.get(self.url,params=params,headers=header)
+#          
+#       resp = r.json()
+
+#       resp = HttpService.MyHTTP().get(self.url, params)
+
+        resp = HttpService.MyHTTP().get(self.url,**DataALL)
         
         connect = resp.get('headers').get('Host')
         

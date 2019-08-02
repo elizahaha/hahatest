@@ -14,7 +14,7 @@ import unittest
 import os
 import time
 import HTMLTestRunner
-import sendEmail
+#import sendEmail
 
 
 if __name__=="__main__":
@@ -27,15 +27,15 @@ if __name__=="__main__":
     
     discover=unittest.defaultTestLoader.discover(test_dir,pattern='*_test.py')
     
-   #2、html报告文件路径
+#   #2、html报告文件路径
    
     now = time.strftime("%y-%m-%d %H_%M_%S")
     
     print(now)  
      
-#     filename ='report'+now+'_test_report.html'
+    filename ='report'+now+'_test_report.html'
     
-    filename='test_report.html'
+#    filename='test_report.html'
     
     report_abspath = os.path.join(report_dir,filename)  
     

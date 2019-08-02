@@ -1,8 +1,14 @@
 eclipse.preferences.version=1
+encoding//public/HttpService.py=utf-8
+encoding//public/read_excel.py=utf-8
+encoding//public/xlrd_train.py=utf-8
+encoding//test_case/get_nothing_test.py=utf-8
 encoding//test_case/get_parames_test.py=utf-8
+encoding//test_case/get_params_headers_test.py=utf-8
 encoding/HTMLTestRunner.py=utf-8
 encoding/get_nothing.py=utf-8
 encoding/new_run_test.py=utf-8
+encoding/post_data_test1.py=utf-8
 encoding/post_file_test1.py=utf-8
 encoding/run_tests.py=UTF-8
 encoding/sendEmail.py=utf-8

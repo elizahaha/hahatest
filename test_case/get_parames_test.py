@@ -5,10 +5,11 @@ Created on 2019��4��10��
 @author: Administrator
 '''
 
-import requests
+
 import unittest
 from _ast import Pass
 from public import base
+from public import HttpService
 
 
 class GetParams(unittest.TestCase):
@@ -21,14 +22,18 @@ class GetParams(unittest.TestCase):
         
     def test_get_params(self):
         
-
-        parmers ={"show_env":1}
+        params ={"show_env":1}
+        
+        DataALL ={'params':params}
         
         #给服务器发送请求
         
-        r=requests.get(self.url,params=parmers)
+#         r=requests.get(self.url,params=parmers)
+#         
+#         resp = r.json()
+            
+        resp = HttpService.MyHTTP().get(self.url,**DataALL)
         
-        resp = r.json()
 #        resp1= json.dumps(resp, encoding="UTF-8", ensure_ascii=False)
         
 #         print resp1
@@ -44,30 +49,27 @@ class GetParams(unittest.TestCase):
 #         print(r.text)#响应文本
 #         
     
-#     def test_get_params2(self):
+    def test_get_params2(self):
 #         
 # 
-#         parmers ={"show_env":1}
-#             
-#         #给服务器发送请求
-#             
+        params ={"show_env":2}
+        
+        DataALL ={'params':params}
+             
+        #给服务器发送请求
+             
 #         r=requests.get(self.url,params=parmers)
-#             
+#              
 #         resp = r.json()
-#             
-#         connect = resp.get('headers').get('Host')
-#         
-#             
-#         self.assertIsInstance(connect,unicode)
 
-
-
+        resp = HttpService.MyHTTP().get(self.url, **DataALL)
+             
+        connect = resp.get('headers').get('Host')
+                      
+        self.assertIsInstance(connect,str)
     
-    
-    
-    
-         
     def tearDown(self):
+        
         Pass
         
 if __name__=='__main__':
